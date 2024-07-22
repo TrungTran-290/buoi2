@@ -1,0 +1,23 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css");
+img{
+    width: 100%;
+    height: auto;
+}
+.imgbox{
+    overflow: hidden;
+    border-radius: 5px;
+    position: relative;
+}
+.imgbox:before{
+position: absolute;
+top: 2%;
+left: 2%;
+border-radius: 4px;
+content: "12 off";
+color: white;
+background-color: #dc3041;
+padding: 3px 7px;
+}
+.Iconbefore:before{
+    content: "\f276";
+}
