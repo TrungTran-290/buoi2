@@ -25,9 +25,10 @@ let arr = [
 function Main() {
   const sidebar = useRef();
   const [flag, setFlg] = useState("");
-  // let buttons =document.querySelectorAll(button)
-  function handle(index) {
-    // buttons[index]
+  const [selectedCategory, setSelectedCategory] = useState("");
+
+  function handle(category) {
+    setSelectedCategory(category);
   }
   return (
     <>
@@ -37,7 +38,7 @@ function Main() {
           <h2 className="h2title">Trending destinations</h2>
         </Container>
         <Container className="text-center">
-          {arr &&
+          {/* {arr &&
             arr.map((item, index) => (
               <button
                 className="btn"
@@ -53,9 +54,23 @@ function Main() {
               >
                 {item.name}
               </button>
-            ))}
+            ))} */}
+          {arr.map((item, index) => (
+            <button
+              className="btn"
+              ref={sidebar}
+              key={index}
+              onClick={() => {
+                setSelectedCategory(item.name);
+                sidebar.current.classList.remove("active");
+                sidebar.current.classList.add("active");
+              }}
+            >
+              {item.name}
+            </button>
+          ))}
         </Container>
-        <Places></Places>
+        <Places selectedCategory={selectedCategory} />
       </Container>
     </>
   );
