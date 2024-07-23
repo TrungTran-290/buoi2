@@ -136,29 +136,13 @@ function Places({ selectedCategory }) {
     },
   ]);
   const filteredList = selectedCategory
-    ? List.filter((item) => item.category === selectedCategory)
-    : List;
+    ? List.filter((item) => item.category === selectedCategory) : List;
 
   return (
     <Container>
       <Row xs="2" sm="3" md="4">
         {filteredList.map((item, index) => (
-          // <Col className="bg-light">
-          //   {/* <Card data-aos="zoom-in"> */}
-          //   <Card className="mt-4 rounded" >
-          //     <div className="imgbox">
-          //       <img alt="Sample" src="https://picsum.photos/300/200" />
-          //     </div>
-          //     <CardBody>
-          //       <CardTitle className="Iconbefore" tag="h6">{item.name}</CardTitle>
-          //       <CardSubtitle className="mt-4 mb-4 text-muted" tag="h5">
-          //         {item.content}
-          //       </CardSubtitle>
-          //       <CardText>{item.Price}</CardText>
-          //       <CardText>Stars</CardText>
-          //     </CardBody>
-          //   </Card>
-          // </Col>
+
           <City key={index} item={item} />
         ))}
       </Row>

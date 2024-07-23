@@ -21,3 +21,11 @@ padding: 3px 7px;
 .Iconbefore:before{
     content: "\f276";
 }
+.cardtext{
+    color: #43d7b5;
+    font-weight: bold;
+}
+.cardtext:before{
+    content: "$";
+    color: #43d7b5;
+}

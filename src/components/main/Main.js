@@ -24,7 +24,6 @@ let arr = [
 
 function Main() {
   const sidebar = useRef();
-  const [flag, setFlg] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
 
   function handle(category) {
@@ -38,23 +37,6 @@ function Main() {
           <h2 className="h2title">Trending destinations</h2>
         </Container>
         <Container className="text-center">
-          {/* {arr &&
-            arr.map((item, index) => (
-              <button
-                className="btn"
-                ref={sidebar}
-                key={index}
-                onClick={() => {
-                  
-                  setFlg(!flag);
-                  sidebar.current.classList.remove("active");
-                  // sidebar.current.classList.add("active")
-                  sidebar.current.classList.add("active");
-                }}
-              >
-                {item.name}
-              </button>
-            ))} */}
           {arr.map((item, index) => (
             <button
               className="btn"
@@ -62,8 +44,8 @@ function Main() {
               key={index}
               onClick={() => {
                 setSelectedCategory(item.name);
-                sidebar.current.classList.remove("active");
-                sidebar.current.classList.add("active");
+                // sidebar.current.classList.remove("active");
+                // sidebar.current.classList.add("active");
               }}
             >
               {item.name}
